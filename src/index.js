@@ -149,7 +149,7 @@ export default {
     const cron = event.cron;
     console.log(`[Cron] 定时任务触发: ${cron}`);
     
-    if (cron === '10 0 * * *') {
+    if (cron === '50 23 * * *') {
       console.log('[Cron] 开始执行每日数据清理任务');
       await cleanupOldData(env.DB);
       console.log('[Cron] 每日数据清理任务完成');
